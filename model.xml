@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+	<properties>
+		<graphics key="showhiddenfeatures" value="true"/>
+		<graphics key="legendautolayout" value="true"/>
+		<graphics key="showshortnames" value="false"/>
+		<graphics key="layout" value="horizontal"/>
+		<graphics key="showcollapsedconstraints" value="true"/>
+		<graphics key="legendhidden" value="false"/>
+		<graphics key="layoutalgorithm" value="1"/>
+	</properties>
+	<struct>
+		<and abstract="true" mandatory="true" name="ejemplocajeroautomatico">
+			<and mandatory="true" name="auditoria">
+				<feature mandatory="true" name="listarOperaciones"/>
+				<feature name="archivo"/>
+			</and>
+			<and mandatory="true" name="Operaciones">
+				<feature name="transferir"/>
+				<feature name="consignar"/>
+				<and mandatory="true" name="retirar">
+					<feature name="SaldoReducido"/>
+				</and>
+				<feature mandatory="true" name="consultar"/>
+			</and>
+		</and>
+	</struct>
+</featureModel>
